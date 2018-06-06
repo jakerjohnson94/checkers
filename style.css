@@ -1,0 +1,35 @@
+#boardOut, .row, .cell {
+  margin: 0;
+  padding: 0;
+}
+
+.cell{
+
+  height: 100px;
+  width: 100px;
+  border: 1px solid rgb(228, 181, 140);
+}
+
+#boardOut{
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  display: flex;
+  justify-content: center;
+}
+
+.checkerPiece{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.black{
+  background-image: url(blackPiece.png);
+
+}
+.red{
+  background-image: url(redPiece.png);
+
+}
