@@ -6,23 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <title>Objects are fun and so are you.</title>
+  <!-- Animated Starry Background adapted from
+    https://codepen.io/saransh/pen/BKJun 
+  -->
+  <link rel="stylesheet" href="starStyle.css">
+  <title>Checkers</title>
 
 </head>
 
 <body>
+  <div id="currentPlayer">
+    <h1>current player:</h1>
+    <h1 id="playerColorOutput"></h1>
+  </div>
   <div id="boardOut"></div>
 
-  <script src="Grid.js"></script>
-  <script src="Cell.js"></script>
 
-  <script src="CheckerPiece.js"></script>
-  <script src="CheckerGrid.js"></script>
-  <script src="BasicSquare.js"></script>
-  <script src="LightSquare.js"></script>
-  <script src="DarkSquare.js"></script>
-  <script src="Player.js"></script>
-  <script src="init.js"></script>
+  <div class="starBackground">
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+  </div>
+
+  <script src="classes/Grid.js"></script>
+  <script src="classes/Cell.js"></script>
+  <script src="classes/CheckerPiece.js"></script>
+  <script src="classes/CheckerGrid.js"></script>
+  <script src="classes/BasicSquare.js"></script>
+  <script src="classes/LightSquare.js"></script>
+  <script src="classes/DarkSquare.js"></script>
+  <script src="classes/Player.js"></script>
+  <script src="classes/Game.js"></script>
+  <script src="classes/init.js"></script>
 </body>
 
 </html>

@@ -5,7 +5,8 @@ function Grid(rowCount, columnCount, offsets, cellHeight, cellWidth) {
   this.cellWidth = cellWidth;
   this.outputElement = document.getElementById('boardOut');
   this.offsets = offsets;
- 
+
+
 
   if (this.cellHeight && this.cellWidth) this.changeSizeOfAllCells(this.cellHeight, this.cellWidth);
 }
@@ -49,8 +50,8 @@ Grid.prototype = {
   getCellsByFilter: function (callback) {
     this.filteredCellArray = []
     for (let i in this.cellArray) {
-      if(this.cellArray[i].filter(callback).length){
-      this.filteredCellArray.push(this.cellArray[i].filter(callback));
+      if (this.cellArray[i].filter(callback).length) {
+        this.filteredCellArray.push(this.cellArray[i].filter(callback));
       }
     }
     return this.filteredCellArray;
@@ -82,11 +83,4 @@ Grid.prototype = {
   },
 
   constructor: Grid,
-  eventListeners: {
-    click: function (event) {
-      this.clickedCell = this.cellArray[event.currentTarget.dataset.rowIndex][event.currentTarget.dataset.columnIndex];
-
-      console.log(this.clickedCell);
-    },
-  },
 }

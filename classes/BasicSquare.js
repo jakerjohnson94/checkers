@@ -7,4 +7,5 @@ function BasicSquare(rowIndex, columnIndex) {
 
 }
 
-BasicSquare.prototype = Cell.prototype
+BasicSquare.prototype = Object.create(Cell.prototype)
+BasicSquare.prototype.constructor = BasicSquare

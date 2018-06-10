@@ -22,7 +22,7 @@ Cell.prototype = {
   },
   addClass: function (newClass) {
     this.element.classList.add(newClass);
-    return this.element; 
+    return this.element;
   },
   swapClasses: function (oldClass, newClass) {
     this.element.classList.remove(oldClass);
@@ -33,7 +33,7 @@ Cell.prototype = {
     this.element.style[propertyName] = value;
     return this.element;
   },
-  appendCellChild: function(childElement){
+  appendCellChild: function (childElement) {
     this.element.appendChild(childElement)
   },
   constructor: Cell,

@@ -1,35 +1,82 @@
-#boardOut, .row, .cell {
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
   margin: 0;
   padding: 0;
 }
 
-.cell{
-
-  height: 100px;
-  width: 100px;
-  border: 1px solid rgb(228, 181, 140);
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(Moon.png);
+  background-repeat: no-repeat;
+  background-position: right -600px top -600px;
+  margin: 0;
+  padding: 0;
 }
 
-#boardOut{
+h1,
+h2 {
+  margin: 0;
+  padding: 25px;
+  padding-bottom: 0;
+}
+
+#boardOut,
+.row,
+.cell {
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.cell {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border: 1px solid rgb(188, 202, 212);
+}
+
+#boardOut {
   display: flex;
   flex-direction: column;
 }
-.row{
+
+.row {
   display: flex;
   justify-content: center;
 }
 
-.checkerPiece{
+.checkerPiece {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
 }
-.black{
+
+.black {
   background-image: url(blackPiece.png);
-
 }
-.red{
-  background-image: url(redPiece.png);
 
+.red {
+  background-image: url(redPiece.png);
+}
+
+.light {
+  background-color: rgba(255, 255, 255, 0.897);
+}
+
+.selected {
+  border: inset 0 0 16px #b3a04e;
+  box-shadow: -5px 7px 50px 15px rgb(183, 228, 245);
+  z-index: 4;
+}
+
+#currentPlayer {
+  position: relative;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
